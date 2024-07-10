@@ -103,3 +103,30 @@ for(let i = 0; i < randomNumbers.length; i++){
 console.log('Sorted array:', randomNumbers);
 
 console.log('-----------------------------------------');
+
+/*
+Create a class named Item with the following requirements:
+    Attributes:
+        name, price, quantity
+
+    Methods:
+        constructor: to initalize all attributes
+        calculateTotalPrice: to calculate and return the total price of the item (price * quantity)
+        toString:
+*/
+
+class Item {
+    constructor(name, price, quantity){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    calculateTotalPrice(){
+        return this.price * this.quantity;
+    }
+
+    toString(){
+        return `Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Total Price: ${this.calculateTotalPrice()}`;
+    }
+}
